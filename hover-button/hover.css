@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hover-btn {
+  background: #2a9fbc;
+  border: 0.1rem solid #98dff0;
+  border-radius: 2rem;
+  width: 10rem;
+  height: 3rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hover-btn:hover {
+  background: #98dff0;
+  color: darkblue;
+  width: 11rem;
+  height: 4rem;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
