@@ -1,0 +1,75 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.watch {
+  width: 500px;
+  height: 500px;
+  border: 10px solid black;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dot {
+  top: 240px;
+  left: 240px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: brown;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ett varv tar 60 sec */
+.sec {
+  width: 2px;
+  height: 225px;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) translateY(-100%);
+  animation: rotate-second 60s linear infinite;
+}
+
+/* Ett varv tar 60 * 60 sec = 3600s */
+.min {
+  width: 4px;
+  height: 150px;
+  background-color: dimgray;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) translateY(-100%);
+  animation: rotate-minute 3600s linear infinite;
+}
+
+/* Animations */
+@keyframes rotate-second {
+  0% {
+    transform: translateX(-50%) translateY(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-minute {
+  0% {
+    transform: translateX(-50%) translateY(-100%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-100%) rotate(360deg);
+  }
+}
