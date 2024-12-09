@@ -6,6 +6,13 @@ body {
   min-height: 100vh;
 }
 
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+}
+
 .hover-btn {
   background: #2a9fbc;
   border: 0.1rem solid #98dff0;

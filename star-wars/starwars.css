@@ -12,6 +12,8 @@ body {
   top: 2rem;
   left: 2rem;
   z-index: 2;
+  background-color: whitesmoke;
+  padding: 1rem;
 }
 
 .fade {
@@ -44,6 +46,7 @@ body {
 .intro {
   width: 70vw;
   position: relative;
+  transform-origin: 50% 100%;
   animation: intro 60s linear infinite;
 }
 

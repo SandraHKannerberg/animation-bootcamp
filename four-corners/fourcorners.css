@@ -7,6 +7,13 @@ body {
   align-items: center;
 }
 
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+}
+
 .container {
   background-color: white;
   position: relative;

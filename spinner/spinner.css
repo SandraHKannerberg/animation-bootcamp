@@ -3,8 +3,17 @@ body {
   height: 100vh;
   background-color: lightgray;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
 }
 
 section {

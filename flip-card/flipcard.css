@@ -9,12 +9,11 @@ body {
   position: absolute;
 }
 
-header {
+.home-link {
   position: absolute;
-  top: 0;
-  height: 5rem;
-  width: 100vw;
-  padding-left: 2rem;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
 }
 
 .card-container {
