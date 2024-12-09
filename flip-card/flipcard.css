@@ -1,0 +1,116 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 5rem;
+  width: 100vw;
+  padding-left: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: transparent;
+  width: 200px;
+  height: 350px;
+  perspective: 1000px; /* Property is needed for 3D effect */
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* 3D effect */
+  cursor: pointer;
+}
+
+.card.flip {
+  animation: liftUpCard 0.5s ease-out forwards,
+    flipCard 1s ease-out 0.5s forwards, backToStart 1s ease-out 8s forwards;
+}
+
+/* Position the front and back side */
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+}
+
+.front {
+  background-color: black;
+  color: white;
+}
+
+.back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.card-text {
+  font-size: 2rem;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: yellow;
+  font-size: 1rem;
+  box-shadow: 0 0 3px rgba(126, 124, 124, 0.2);
+}
+
+/* ANIMATION - 3 steps */
+
+/* Step 1 - Lift up */
+@keyframes liftUpCard {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(-250px) rotateY(0deg);
+  }
+}
+
+/* Step 2 - Flip the card, show back */
+@keyframes flipCard {
+  0% {
+    transform: translateY(-250px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-250px) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0px) rotateY(180deg);
+  }
+}
+
+/* Step 3 - Flip the card, show front */
+@keyframes backToStart {
+  0% {
+    transform: translateY(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card flip</title>
+    <link rel="stylesheet" href="/flip-card/flipcard.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <article class="card">
+        <section class="front"><p class="card-text">Front</p></section>
+        <section class="back"><p class="card-text">Back</p></section>
+      </article>
+      <button class="toggle">Click on me</button>
+    </div>
+
+    <script>
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector(".card").classList.toggle("flip");
+      });
+    </script>
+  </body>
+</html>
