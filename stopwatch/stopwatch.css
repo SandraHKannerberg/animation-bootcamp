@@ -5,6 +5,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  height: 5rem;
+  width: 100vw;
+  padding-left: 2rem;
 }
 
 .watch {
