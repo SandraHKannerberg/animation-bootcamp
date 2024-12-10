@@ -1,0 +1,148 @@
+/*CSS RESET*/
+/* remove default spacing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --shadow-color: rgb(151, 149, 149);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: lightgray;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: black;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: transparent;
+  width: 200px;
+  height: 350px;
+  perspective: 1000px; /* Property is needed for 3D effect */
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* 3D effect */
+}
+
+.card.flip {
+  animation: flipCard 5s ease-out forwards;
+}
+
+/* Position the front and back side */
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 8px var(--shadow-color);
+  padding: 0.5rem;
+}
+
+.front {
+  background-color: black;
+  color: white;
+}
+
+.back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text-front {
+  font-size: 2rem;
+}
+
+.card-text-back {
+  font-size: 3rem;
+  color: rgb(233, 40, 40);
+}
+
+.card-text-back-small {
+  font-size: 1.5rem;
+  color: rgb(233, 40, 40);
+}
+
+.card-box-left {
+  align-self: end;
+}
+
+.card-box-right {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  transform: rotate(-180deg);
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: yellow;
+  font-size: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  cursor: pointer;
+}
+
+@keyframes flipCard {
+  0% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-150px) rotateY(180deg);
+  }
+  100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+}

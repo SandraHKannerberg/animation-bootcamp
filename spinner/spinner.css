@@ -1,0 +1,111 @@
+:root {
+  --shadow-color: rgb(151, 149, 149);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: black;
+}
+
+section {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.spinner {
+  width: 150px;
+  height: 0.8rem;
+  border-radius: 1rem;
+  background-color: red;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: loading-spinner 3s linear infinite;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg); /* Börjar vid 0 grader */
+  }
+  to {
+    transform: rotate(360deg); /* Slutar vid 360 grader */
+  }
+}
+
+/* Testar en annan typ av loader */
+/* Loading area */
+.container {
+  width: 150px; /* Diameter på loading arean */
+  height: 150px;
+  border-radius: 50%;
+  position: relative; /* Referens för den lilla cirkelns rörelse */
+}
+
+/* Det är denna som snurrar och i den så är en liten cirkel fäst så att det ser ut som att det är den som snurrar */
+.loading-wrapper {
+  width: 100%; /* Viktigt! Samma storlek som den stora cirkeln */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loading-circle 4s linear infinite; /* Animering som roterar för loading-wrappern */
+}
+
+.small-circle {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0; /* Placera den på toppen av loading-wrappern */
+  left: 50%; /* Centrerar horisontellt i loading-wrappern */
+  transform: translate(-55%, 0); /* Justera till rätt position */
+}
+
+.loading-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid red;
+  border-bottom-width: 1px;
+  border-right-width: 0;
+  animation: loading-circle 4s linear infinite; /* Animering som roterar för loading-wrappern */
+}
+
+/* Animering för att rotera loading-wrappern */
+@keyframes loading-circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

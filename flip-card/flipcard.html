@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card flip</title>
+    <link rel="stylesheet" href="/flip-card/flipcard.css" />
+  </head>
+  <body>
+    <a class="home-link" href="/index.html">Go Back</a>
+    <div class="card-container">
+      <article class="card">
+        <section class="front">
+          <p class="card-text-front">Card Game</p>
+        </section>
+        <section class="back">
+          <div class="card-box-left">
+            <p class="card-text-back-small">&hearts;</p>
+            <p class="card-text-back-small">A</p>
+          </div>
+          <p class="card-text-back">&hearts;</p>
+          <div class="card-box-right">
+            <p class="card-text-back-small">&hearts;</p>
+            <p class="card-text-back-small">A</p>
+          </div>
+        </section>
+      </article>
+      <button class="toggle">Flip the card</button>
+    </div>
+
+    <script>
+      document.querySelector(".toggle").addEventListener("click", (e) => {
+        document.querySelector(".card").classList.toggle("flip");
+      });
+    </script>
+  </body>
+</html>

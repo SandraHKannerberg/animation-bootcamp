@@ -1,0 +1,129 @@
+:root {
+  --size: 500px;
+  --shadow-color: rgb(151, 149, 149);
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: black;
+}
+
+.container {
+  background-color: white;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  box-shadow: 0 0 25px var(--shadow-color);
+}
+
+/* Boxen */
+.box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  animation: moveBox 10s ease infinite, changeColor 10s linear infinite;
+  box-shadow: 0 0 5px var(--shadow-color);
+}
+
+/* Move Box */
+@keyframes moveBox {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: 0;
+    left: 0; /* Paus */
+  }
+  25% {
+    top: 0;
+    left: 450px;
+  }
+  45% {
+    top: 0;
+    left: 450px; /* Paus */
+  }
+  50% {
+    top: 450px;
+    left: 450px;
+  }
+  70% {
+    top: 450px;
+    left: 450px; /* Paus */
+  }
+  75% {
+    top: 450px;
+    left: 0;
+  }
+  95% {
+    top: 450px;
+    left: 0; /* Paus */
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+/* Colorchange */
+@keyframes changeColor {
+  0%,
+  20% {
+    background-color: rgb(126, 231, 126);
+  }
+  25%,
+  45% {
+    background-color: rgb(238, 178, 238);
+  }
+  50%,
+  70% {
+    background-color: rgb(243, 243, 167);
+  }
+  75%,
+  95% {
+    background-color: rgb(151, 76, 151);
+  }
+  100% {
+    background-color: rgb(126, 231, 126);
+  }
+}
+
+/* LATHUND */
+/* animation: name duration timing delay count direction; */
+
+/* @keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */

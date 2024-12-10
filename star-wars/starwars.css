@@ -1,0 +1,96 @@
+:root {
+  --shadow-color: rgb(151, 149, 149);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=600");
+  perspective: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: white;
+}
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: yellow;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 6rem;
+  line-height: 1.5;
+  perspective: 400px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  width: 70vw;
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: intro 60s linear infinite;
+}
+
+.intro > .title {
+  text-align: center;
+}
+
+.intro > .title h1 {
+  text-transform: uppercase;
+}
+
+@keyframes intro {
+  0% {
+    top: 0;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
