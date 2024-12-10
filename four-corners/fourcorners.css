@@ -1,6 +1,11 @@
+:root {
+  --size: 500px;
+  --shadow-color: rgb(151, 149, 149);
+}
+
 body {
   min-height: 100vh;
-  background-color: lightgray;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,7 +16,21 @@ body {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  z-index: 2;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: black;
 }
 
 .container {
@@ -19,6 +38,7 @@ body {
   position: relative;
   width: 500px;
   height: 500px;
+  box-shadow: 0 0 25px var(--shadow-color);
 }
 
 /* Boxen */
@@ -28,6 +48,7 @@ body {
   height: 50px;
   background-color: green;
   animation: moveBox 10s ease infinite, changeColor 10s linear infinite;
+  box-shadow: 0 0 5px var(--shadow-color);
 }
 
 /* Move Box */

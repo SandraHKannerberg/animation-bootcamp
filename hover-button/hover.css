@@ -1,3 +1,7 @@
+:root {
+  --shadow-color: rgb(151, 149, 149);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -10,12 +14,26 @@ body {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  z-index: 2;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: black;
 }
 
 .hover-btn {
   background: #2a9fbc;
-  border: 0.1rem solid #98dff0;
+  border: 2px solid #98dff0;
   border-radius: 2rem;
   width: 10rem;
   height: 3rem;
@@ -32,4 +50,6 @@ body {
   width: 11rem;
   height: 4rem;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  text-decoration: underline;
 }

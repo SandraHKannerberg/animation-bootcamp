@@ -1,12 +1,13 @@
 :root {
   --color: calc(300 / 6);
   --index: 1;
+  --shadow-color: rgb(151, 149, 149);
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  background-color: lightgray;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,21 @@ body {
   position: absolute;
   top: 2rem;
   left: 2rem;
-  z-index: 2;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 0 15px var(--shadow-color);
+  text-decoration: none;
+  border-radius: 2rem;
+}
+.home-link:hover {
+  box-shadow: 0 0 25px var(--shadow-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home-link:visited {
+  color: white;
 }
 
 .cube {
