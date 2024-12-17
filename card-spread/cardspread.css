@@ -54,7 +54,7 @@ h1 {
   position: absolute;
   border-radius: 1rem;
   transition: all 1s ease-out;
-  /* Beräknar olika bakgrundsfärg för varje kort */
+  /* Calculates different colors for all cards */
   background-color: hsl(
     calc(var(--color) * var(--index) * -1 - 45),
     /* Saturation */ 95%,

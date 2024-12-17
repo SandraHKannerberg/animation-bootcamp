@@ -53,30 +53,30 @@ section {
 
 @keyframes loading-spinner {
   from {
-    transform: rotate(0deg); /* Börjar vid 0 grader */
+    transform: rotate(0deg); /* Start */
   }
   to {
-    transform: rotate(360deg); /* Slutar vid 360 grader */
+    transform: rotate(360deg); /* End */
   }
 }
 
-/* Testar en annan typ av loader */
+/* Testing another type of loader */
 /* Loading area */
 .container {
-  width: 150px; /* Diameter på loading arean */
+  width: 150px;
   height: 150px;
   border-radius: 50%;
-  position: relative; /* Referens för den lilla cirkelns rörelse */
+  position: relative; /* Referens for the small circles move */
 }
 
-/* Det är denna som snurrar och i den så är en liten cirkel fäst så att det ser ut som att det är den som snurrar */
+/* It is this wrapper that spins. The small circle is attached to it so that it looks like it is the one that is spinning */
 .loading-wrapper {
-  width: 100%; /* Viktigt! Samma storlek som den stora cirkeln */
+  width: 100%; /* Important! Need to be the same siza as the big circle*/
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  animation: loading-circle 4s linear infinite; /* Animering som roterar för loading-wrappern */
+  animation: loading-circle 4s linear infinite; /* Animation for loading-wrappern */
 }
 
 .small-circle {
@@ -85,9 +85,9 @@ section {
   background-color: red;
   border-radius: 50%;
   position: absolute;
-  top: 0; /* Placera den på toppen av loading-wrappern */
-  left: 50%; /* Centrerar horisontellt i loading-wrappern */
-  transform: translate(-55%, 0); /* Justera till rätt position */
+  top: 0; /* Top of loading-wrappern */
+  left: 50%; /* Center in loading-wrappern */
+  transform: translate(-55%, 0);
 }
 
 .loading-circle {
@@ -97,10 +97,9 @@ section {
   border: 5px solid red;
   border-bottom-width: 1px;
   border-right-width: 0;
-  animation: loading-circle 4s linear infinite; /* Animering som roterar för loading-wrappern */
+  animation: loading-circle 4s linear infinite;
 }
 
-/* Animering för att rotera loading-wrappern */
 @keyframes loading-circle {
   from {
     transform: rotate(0deg);
