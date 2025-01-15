@@ -1,3 +1,6 @@
-# Animation-Bootcamp</br>
+# Animation Bootcamp
+Different exercises to practice css animations. Part of a continuing education program to specialize in frontend development, Frontend developer at Lexicon IT-Proffs (FE-24/25).
 
-Exercises to practise css animations - Lexicon IT Proffs FE-24/25, Frontend education 
+# Techniques used
+HTML, CSS, animations.
+
